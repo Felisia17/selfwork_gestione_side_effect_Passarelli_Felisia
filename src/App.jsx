@@ -7,6 +7,9 @@ import Form from "./components/Form.jsx";
 import Counter from "./components/Counter.jsx";
 import React from "react";
 import LoadingData from "./components/LoadingData.jsx";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Homepage from "./views/Homepage.jsx";
+import Info from "./views/Info.jsx";
 
 
 function App() {
@@ -31,6 +34,14 @@ const names = ['Zena', 'Athena', 'Alaska', 'Africa'];
     <Form></Form>
     <Counter></Counter>
     <LoadingData></LoadingData>
+
+    <BrowserRouter>
+      <Routes>
+      <Route path="/Info" element={<Info/>}
+      <Route path="/" element={<Homepage/>}/>
+
+      </Routes>
+    </BrowserRouter>
 
     </>
       
