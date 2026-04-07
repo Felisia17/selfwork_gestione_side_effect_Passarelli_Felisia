@@ -37,7 +37,7 @@ const names = ['Zena', 'Athena', 'Alaska', 'Africa'];
 
     <BrowserRouter>
       <Routes>
-      <Route path="/Info" element={<Info/>}
+      <Route path="/Info" element={<Info/>}/>
       <Route path="/" element={<Homepage/>}/>
 
       </Routes>
