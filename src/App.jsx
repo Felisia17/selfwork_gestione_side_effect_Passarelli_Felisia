@@ -1,44 +1,25 @@
 
 
-import Header from "./components/Header.jsx";
-import List from "./components/List.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Form from "./components/Form.jsx";
-import Counter from "./components/Counter.jsx";
-import React from "react";
-import LoadingData from "./components/LoadingData.jsx";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./views/Homepage.jsx";
-import Info from "./views/Info.jsx";
+import Posts from "./views/Posts.jsx";
+import Details from "./views/Details.jsx";
 
 
-function App() {
-
-const project = 'React';
-
-const names = ['Zena', 'Athena', 'Alaska', 'Africa'];
+function App() { 
 
   return (
     <>
 
-    
+    <BrowserRouter>
     
     <Navbar></Navbar>
     
-    <h1 className="titleClass">Io sono il titolo del mio nuovo progetto {project}</h1>
-    <input className="inputClass" type="text" id="input1"/>
-    <label className="labelClass" htmlFor="input1">Io sono l'input</label>
-    <Header></Header>
-    <List names={names}/>
-
-    <Form></Form>
-    <Counter></Counter>
-    <LoadingData></LoadingData>
-
-    <BrowserRouter>
       <Routes>
-      <Route path="/Info" element={<Info/>}/>
-      <Route path="/" element={<Homepage/>}/>
+      <Route path="/" element={<Homepage/>}/>   
+      <Route path="/posts" element={<Posts/>}/>
+      <Route path="/details" element={<Details/>}/>
 
       </Routes>
     </BrowserRouter>
@@ -55,4 +36,3 @@ export default App
 
 
 
-//NECESSITO DI PIù CHIARIMENTI IN MERITO AI COMPOUND COMPONENTS
